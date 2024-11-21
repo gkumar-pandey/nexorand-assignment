@@ -214,7 +214,7 @@ export const getUserHistory = async (req, res) => {
     const history = await ClaimHistory.find({ username });
 
     // Return only pointsAwarded and formatted createdAt
-    const formattedHistory = history.map((entry) => {
+    const formattedHistory = history.map(entry => {
       // Check if entry.createdAt is valid
       const createdAt =
         entry.createdAt && isValid(new Date(entry.createdAt))
@@ -274,7 +274,7 @@ export const getUserWithHelpOfToken = async (req, res) => {
 
 export const getUserWithHelpOfId = async (req, res) => {
   try {
-    const {userId} = req.body; // taken from middleware
+    const { userId } = req.body; // taken from middleware
 
     // Find the user by userId
     const user = await User.findById(userId);
@@ -299,4 +299,4 @@ export const getUserWithHelpOfId = async (req, res) => {
       error: error.message,
     });
   }
-}
+};
