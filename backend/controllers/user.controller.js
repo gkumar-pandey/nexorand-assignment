@@ -1,6 +1,7 @@
 import User from "../models/users.model.js";
 import { format, isValid } from "date-fns"; // For date formatting and validation
 import ClaimHistory from "../models/claimsHistory.model.js";
+
 export const getAllUser = async (req, res) => {
   try {
     const allUsers = await User.find();
