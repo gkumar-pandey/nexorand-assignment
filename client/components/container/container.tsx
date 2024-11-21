@@ -5,7 +5,7 @@ type ContainerProps = {
 };
 
 const Container: FC<ContainerProps> = ({ children }) => {
-  return <div className="mx-auto max-w-[1440px] ">{children}</div>;
+  return <div className="mx-auto max-w-[1440px] px-3 ">{children}</div>;
 };
 
 export default Container;
