@@ -1,7 +1,10 @@
+"use client";
 import React from "react";
-import Container from "../container/container";
+
 import Link from "next/link";
-import { Avatar, AvatarFallback, AvatarImage } from "../ui/avatar";
+
+import Container from "../container/container";
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 
 const Navbar = () => {
   return (

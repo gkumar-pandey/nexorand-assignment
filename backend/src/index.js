@@ -1,6 +1,6 @@
 import express from "express";
 import { connectDb } from "./config/dbConenction.js";
-import cors from "cors"
+import cors from "cors";
 // *********** All-Routes *************
 import auth from "./routes/auth.routes.js";
 import user from "./routes/user.routes.js";
@@ -49,7 +49,9 @@ app.use((err, req, res, next) => {
   });
 });
 
-app.listen(7000, async () => {
+const PORT = process.env.PORT;
+
+app.listen(PORT, async () => {
   console.log("Server is running on port 7000");
   await connectDb();
 });
