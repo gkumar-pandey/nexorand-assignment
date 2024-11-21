@@ -7,8 +7,7 @@ import user from "./routes/user.routes.js";
 // *********** All-Routes *************
 
 import cookieParser from "cookie-parser";
-import { Register } from "./controllers/auth.controller.js";
-import User from "./models/users.model.js";
+
 const app = express();
 // Use cors middleware
 const corsOptions = {
